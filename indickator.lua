@@ -21,10 +21,14 @@ local function RenderIndicator(str, val)
 	cur_pos = cur_pos - pos_add
 end
 
+local test_val = cheat.Checkbox("test")
+
 cheat.RegisterCallback("draw", function()
+	--print(tostring(test_val:GetBool()))
 	cur_pos = pos_start
 
 	RenderIndicator("RAGE", var_rage:GetBool() )
 	RenderIndicator("AA", var_aa:GetBool())
+	RenderIndicator("TEST", test_val:GetBool())
 
 end)
