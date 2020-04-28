@@ -5,9 +5,9 @@ local clr_red = Color.new(255, 0, 0)
 local var_aa = g_Config.FindGlobalVar("antiaim", "enabled")
 local var_rage = g_Config.FindGlobalVar("ragebot", "enabled")
 
-local screen_w, screen_h = g_EngineClient.GetScreenSize()
+local screen = g_EngineClient.GetScreenSize()
 
-local pos_start = Vector2.new(20,screen_h -  100)
+local pos_start = Vector2.new(20,screen.y -  100)
 local text_size = 30
 local pos_add = Vector2.new(0, text_size)
 local cur_pos = 0 -- current frame
